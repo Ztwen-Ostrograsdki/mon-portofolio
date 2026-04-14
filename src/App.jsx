@@ -7,6 +7,7 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
+          <Footer />
         </div>
       </BrowserRouter>
     </ThemeProvider>
