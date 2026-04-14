@@ -1,12 +1,22 @@
-import { useState, memo } from "react";
+import { memo } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Projects";
+import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center mt-10">Mon Portfolio</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
