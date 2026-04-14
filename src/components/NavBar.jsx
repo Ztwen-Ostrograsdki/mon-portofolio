@@ -1,6 +1,7 @@
 import { memo, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import logo from "../assets/logo.svg";
 
 const links = [
   { to: "/", label: "Accueil" },

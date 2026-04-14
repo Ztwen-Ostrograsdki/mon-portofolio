@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.svg";
 
 const Footer = memo(() => {
   const year = new Date().getFullYear();
@@ -8,7 +9,10 @@ const Footer = memo(() => {
     <footer className="border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo */}
-        <span className="font-mono font-bold text-gray-900 dark:text-white">
+        <NavLink to="/">
+          <img src={logo} alt="ZtweN Oströgrasdki.dev" className="h-10 " />
+        </NavLink>
+        <span className="font-mono font-bold text-gray-900 dark:text-white hidden">
           &lt;ZtweN.dev<span className="text-green-500">/</span>&gt;
         </span>
 
